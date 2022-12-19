@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div>
+    <div class="container">
 
         <!-- LOGO -->
         <header>
@@ -21,12 +21,12 @@
         <form>
             <textarea name="text" id="text" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
 
-            <fieldset>
-                <div>  <span>ICON</span>  <p>Solo letras minúsculas y sin acentos</p>  </div>
+            <fieldset class="main-bottom">
+                <div class="main-bottom_legend">  <span>ICON</span>  <p>Solo letras minúsculas y sin acentos</p>  </div>
 
-                <div>
-                    <button type="submit">Encriptar</button>
-                    <button type="submit">Desencriptar</button>
+                <div class="main-botton_buttons">
+                    <button type="submit" id="encrypt">Encriptar</button>
+                    <button type="submit" id="decrypt">Desencriptar</button>
                 </div>
             </fieldset>
 
@@ -34,7 +34,7 @@
 
         <!-- TEXT -->
         <aside>
-            <div>
+            <div class="aside_previus">
                 <img src="/img/Muñeco.png" alt="Character">
 
                 <p>Ningún mensaje fue encontrado</p>
