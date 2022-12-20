@@ -75,6 +75,8 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin: 0 80px;
 }
 
 form textarea {
@@ -151,5 +153,39 @@ form .main-bottom .main-bottom_legend {
 
 aside {
     grid-column: 10 / 13;
+    background-color: var(--white);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
 }
 
+aside .aside_previus {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 32px;
+}
+
+aside .aside_previus img {
+    width: 336px;
+}
+
+aside .aside_previus p:first-child {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    color: var(--grey-500);
+}
+
+aside .aside_previus p:last-child {
+    font-size: var(--font-size-regular);
+    color: var(--grey-400);
+}
