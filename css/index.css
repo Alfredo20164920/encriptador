@@ -1,4 +1,7 @@
 :root {
+
+    --white: #fff;
+
     /* DARK BLUE  */
     --dark-blue-100: #609ED4;
     --dark-blue-200: #356EA9;
@@ -58,7 +61,8 @@ body {
 
 header {
     grid-column: 1 / 2;
-    
+    display: flex;
+    justify-content: center;
 }
 
 header img {
@@ -68,7 +72,82 @@ header img {
 
 form {
     grid-column: 2 / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+form textarea {
+    width: 100%;
+    height: 70%;
+    padding: 10px;    
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+
+    color: var(--dark-blue-300);
+    font-size: var(--font-size-xlarge);
+
+}
+
+form textarea::placeholder {
+    color: var(--dark-blue-300);
+    font-size: var(--font-size-xlarge);
+}
+
+form .main-bottom {
+    border: none;
+}
+
+form .main-bottom .main-bottom_legend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    font-size: var(--font-size-small);
+    color: var(--grey-400);
+
+    gap: 5px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.main-botton_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-botton_buttons button {
+    width: 48%;
+    height: 67px;
+    padding: 0 24px;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    font-size: var(--font-size-large);
+    cursor: pointer;
+}
+
+.main-botton_buttons button:hover {
+    opacity: 0.8;
+}
+
+.main-botton_buttons button:first-child {
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+}
+
+.main-botton_buttons button:last-child {
+    background-color: var(--white);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+}
+
 
 aside {
     grid-column: 10 / 13;
