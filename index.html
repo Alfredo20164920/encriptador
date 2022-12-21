@@ -30,7 +30,7 @@
         </header>
 
         <!-- TYPE TEXT -->
-        <form>
+        <form onsubmit="event.preventDefault()">
             <textarea name="text" id="text" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
 
             <fieldset class="main-bottom">
@@ -56,10 +56,22 @@
 
             </div>
 
-            <div id="result"></div>
+            <div class="result">
+
+                <div class="result_text">
+                    <p id="result"></p>
+                </div>
+
+                <div class="result_copy">
+                    <button id="copy">Copiar</button>
+                </div>
+
+            </div>
         </aside>
 
     </div>
+
+    <script src="./js/index.js"></script>
     
 </body>
 </html>
