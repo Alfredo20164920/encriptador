@@ -144,7 +144,7 @@ form .main-bottom .main-bottom_legend {
     color: var(--white);
 }
 
-.main-botton_buttons button:last-child {
+.main-botton_buttons button:last-child, .result_copy button {
     background-color: var(--white);
     color: var(--dark-blue-300);
     border: 1px solid var(--dark-blue-300);
@@ -188,4 +188,27 @@ aside .aside_previus p:first-child {
 aside .aside_previus p:last-child {
     font-size: var(--font-size-regular);
     color: var(--grey-400);
+}
+
+.result {
+    font-size: 2.4rem;
+    color: var(--grey-400);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.result .result_text {
+    height: auto;
+    overflow-y: auto;
+}
+
+.result .result_copy button{
+    width: 100%;
+    height: 67px;
+    padding: 0 24px;
+    border-radius: 24px;
 }
