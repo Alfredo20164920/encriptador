@@ -1,3 +1,4 @@
+// Normalization of the text
 const text = document.getElementById('text');
 
 //buttons
@@ -13,17 +14,31 @@ const aside = document.getElementsByClassName('aside_previus');
 
 // Event listeners
 encryptBtn.addEventListener('click', () => {
-    
     let textValue = normalizeText(text.value);
 
-    aside[0].style.display = 'none';
-    result.style.display = 'block';
+    if(textValue){
+        aside[0].style.display = 'none';
+        result.style.display = 'flex';
 
-    result.innerText = encrypt(textValue);
+        result.innerText = encrypt(textValue);
+    } else {
+        aside[0].style.display = 'flex';
+        result.style.display = 'none';
+    }
+});
 
-    encrypt(textValue);
-    
+decryptBtn.addEventListener('click', () => {
+    let textValue = normalizeText(text.value);
 
+    if(textValue){
+        aside[0].style.display = 'none';
+        result.style.display = 'flex';
+
+        result.innerText = decrypt(textValue);
+    } else {
+        aside[0].style.display = 'flex';
+        result.style.display = 'none';
+    }
 });
 
 copyBtn.addEventListener('click', copy);
@@ -51,6 +66,15 @@ function encrypt(str) {
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
+}
+
+function decrypt(str) {
+    return str
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
 }
 
 function copy() {
