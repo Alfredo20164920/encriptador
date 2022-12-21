@@ -5,12 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura challenge - Desafío 1</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
     
+    <!-- ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <!-- <script src="https://app.embed.im/snow.js" defer></script> -->
 </head>
 <body>
 
-    <div>
+    <div class="container">
 
         <!-- LOGO -->
         <header>
@@ -18,15 +30,15 @@
         </header>
 
         <!-- TYPE TEXT -->
-        <form>
+        <form onsubmit="event.preventDefault()">
             <textarea name="text" id="text" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
 
-            <fieldset>
-                <div>  <span>ICON</span>  <p>Solo letras minúsculas y sin acentos</p>  </div>
+            <fieldset class="main-bottom">
+                <div class="main-bottom_legend">  <ion-icon name="alert-circle" class="icon"></ion-icon>  <p>Solo letras minúsculas y sin acentos</p>  </div>
 
-                <div>
-                    <button type="submit">Encriptar</button>
-                    <button type="submit">Desencriptar</button>
+                <div class="main-botton_buttons">
+                    <button type="submit" id="encrypt">Encriptar</button>
+                    <button type="submit" id="decrypt">Desencriptar</button>
                 </div>
             </fieldset>
 
@@ -34,18 +46,32 @@
 
         <!-- TEXT -->
         <aside>
-            <div>
+            <div class="aside_previus">
                 <img src="/img/Muñeco.png" alt="Character">
 
-                <p>Ningún mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <div >
+                    <p>Ningún mensaje fue encontrado</p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
 
             </div>
 
-            <div id="result"></div>
+            <div class="result">
+
+                <div class="result_text">
+                    <p id="result"></p>
+                </div>
+
+                <div class="result_copy">
+                    <button id="copy">Copiar</button>
+                </div>
+
+            </div>
         </aside>
 
     </div>
+
+    <script src="./js/index.js"></script>
     
 </body>
 </html>
