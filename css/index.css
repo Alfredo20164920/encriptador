@@ -71,7 +71,7 @@ header img {
 }
 
 form {
-    grid-column: 2 / 10;
+    grid-column: 2 / 9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,11 +127,10 @@ form .main-bottom .main-bottom_legend {
 .main-botton_buttons button {
     width: 48%;
     height: 67px;
-    padding: 0 24px;
     border: none;
     outline: none;
     border-radius: 24px;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-regular);
     cursor: pointer;
 }
 
@@ -152,7 +151,7 @@ form .main-bottom .main-bottom_legend {
 
 
 aside {
-    grid-column: 10 / 13;
+    grid-column: 9 / 13;
     background-color: var(--white);
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -175,7 +174,7 @@ aside .aside_previus {
 }
 
 aside .aside_previus img {
-    width: 336px;
+    width: 90%;
 }
 
 aside .aside_previus p:first-child {
@@ -203,7 +202,6 @@ aside .aside_previus p:last-child {
 
 .result .result_text {
     height: auto;
-    overflow-y: auto;
 }
 
 .result .result_copy button{
@@ -211,6 +209,45 @@ aside .aside_previus p:last-child {
     height: 67px;
     padding: 0 24px;
     border-radius: 24px;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-regular);
     cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    
+
+    header {
+        grid-column: 1 / 13;
+    }
+
+    form {
+        grid-column: 1 / 13;
+        margin: 0;
+    }
+
+    aside {
+        grid-column: 1 / 13;
+    }
+
+    aside .aside_previus img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-botton_buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 64px;
+    }
+
+    .main-botton_buttons button {
+        width: 100%;
+    }
+
+    .result .result_copy button {
+        margin-top: 32px;
+    }
 }
