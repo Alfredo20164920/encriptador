@@ -211,4 +211,6 @@ aside .aside_previus p:last-child {
     height: 67px;
     padding: 0 24px;
     border-radius: 24px;
+    font-size: var(--font-size-large);
+    cursor: pointer;
 }
