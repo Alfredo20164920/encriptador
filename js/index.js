@@ -3,6 +3,7 @@ const text = document.getElementById('text');
 //buttons
 const encryptBtn = document.getElementById('encrypt');
 const decryptBtn = document.getElementById('decrypt');
+const copyBtn = document.getElementById('copy');
 
 // Show the result
 const result = document.getElementById('result');
@@ -24,6 +25,8 @@ encryptBtn.addEventListener('click', () => {
     
 
 });
+
+copyBtn.addEventListener('click', copy);
 
 // Specials functions
 function removeAccents(str) {
@@ -48,4 +51,9 @@ function encrypt(str) {
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
+}
+
+function copy() {
+    const copyText = document.getElementById("result").textContent;
+    navigator.clipboard.writeText(copyText);
 }
